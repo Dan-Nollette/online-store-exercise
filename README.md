@@ -12,6 +12,19 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+This App requires a firebase API key in order to work. If you don't have one already you can sign up here (https://firebase.google.com/). Once you sign up, click "Add Firebase to your web app". Save the html snippet that then pops up.
+
+Once you have the relevant data handy, create a file in the root of the project named src/app/api-keys.ts
+The content should be as follows with the specifics filled in based on the snippet you got from firebase:
+```
+  export var masterFirebaseConfig = {
+    apiKey: "xxxx",
+    authDomain: "xxxx.firebaseapp.com",
+    databaseURL: "https://xxxx.firebaseio.com",
+    storageBucket: "xxxx.appspot.com",
+    messagingSenderId: "xxxx"
+  }; ```
+
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
